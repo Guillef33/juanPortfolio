@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+// import { Inter } from "next/font/google";
+// import styles from "@/styles/Home.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,9 +14,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>
-        Mi nombre es Juan Flores y soy editor de video y realizador audiovisual
-      </h1>
+      <div className="bg-black">
+        <h1 className="font-semibold text-5xl">
+          Mi nombre es Juan Flores y soy editor de video y realizador
+          audiovisual
+        </h1>
+      </div>
     </>
   );
 }
