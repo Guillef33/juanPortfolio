@@ -13,12 +13,13 @@ const Footer = () => {
       <div className="mx-auto flex h-full max-w-[82.875rem] flex-col md:flex-row">
         <div className="mb-14 flex-1 md:mr-4 md:mb-0">
           <div className="mb-9 md:mb-[70px]">
-            <NostromoLogo height={50} width={188} />
+            {/* <NostromoLogo height={50} width={188} /> */}
           </div>
-          <form className="relative mb-8 max-w-[25rem]">
+          {/* <form className="relative mb-8 max-w-[25rem]">
             <label
               className="text-[13px] font-bold leading-[16px] text-[#2C2C2C] text-opacity-40 focus-within:text-nostromo-dark-grey md:text-sm md:leading-[17px]"
-              htmlFor="email">
+              htmlFor="email"
+            >
               email adress
               <input
                 className="block w-full border-b border-[#959595] text-xs leading-[15px] text-nostromo-dark-grey focus:border-black focus:outline-none md:text-lg md:leading-[22px]"
@@ -28,18 +29,18 @@ const Footer = () => {
                 <ArrowFooterFormIcon height={10} width={20} />
               </button>
             </label>
-          </form>
+          </form> */}
           <div className="flex items-center gap-x-[18px]">
-            <a href="https://www.linkedin.com/company/nostromo-energy">
+            <a href="https://www.linkedin.com">
               <LinkedinIcon height={20} width={20} />
             </a>
-            <a href="https://www.facebook.com/Nostromo-energy-916826548452896">
+            <a href="https://www.facebook.com">
               <FacebookIcon height={20} width={20} />
             </a>
-            <a href="https://twitter.com/NostromoE">
+            <a href="https://twitter.com">
               <TwitterIcon height={20} width={20} />
             </a>
-            <a href="https://www.instagram.com/nostromo_energy">
+            <a href="https://www.instagram.com">
               <InstagramIcon height={20} width={20} />
             </a>
           </div>
@@ -50,34 +51,34 @@ const Footer = () => {
               Profiles
             </span>
             <Link passHref href="/profiles">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
                 Overview
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/profiles/office-buildings">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
                 Office Buildings
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/profiles/government">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
                 Government
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/profiles/higher-education">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
                 Higher Education
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/profiles/hospitality">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
                 Hospitality
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/profiles/data-centers">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
                 Data Centers
-              </a>
+              </a> */}
             </Link>
           </div>
           <div className="mb-[1.438rem] flex flex-col items-start md:mr-4 md:flex-auto">
@@ -85,51 +86,51 @@ const Footer = () => {
               Technology
             </span>
             <Link passHref href="/technology">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
                 Overview
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/technology/icebrick">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
                 The IceBrick Energy Cell
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/technology/cloud">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-[rgb(44,44,44,0.4)]">
                 Cloud Based Optimization & Reporting
-              </a>
+              </a> */}
             </Link>
           </div>
           <div className="flex flex-col items-start md:flex-1">
             <Link passHref href="/sustainability">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-dark-grey">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-dark-grey">
                 Sustainability
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/about">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-dark-grey">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-dark-grey">
                 About
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/blogs">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-dark-grey">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-dark-grey">
                 Blog & News
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/contact">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-dark-grey">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-dark-grey">
                 Contact
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/partners">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-dark-grey">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-dark-grey">
                 Partners
-              </a>
+              </a> */}
             </Link>
             <Link passHref href="/investors">
-              <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-red">
+              {/* <a className="mb-[1.063rem] text-sm font-bold leading-[1.063rem] text-nostromo-red">
                 Investors
-              </a>
+              </a> */}
             </Link>
           </div>
         </div>

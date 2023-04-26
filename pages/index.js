@@ -14,11 +14,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-black">
-        <h1 className="font-semibold text-5xl">
-          Mi nombre es Juan Flores y soy editor de video y realizador
-          audiovisual
-        </h1>
+      <div className="bg-black h-screen flex items-center justify-center flex-col">
+        <h1 className="font-semibold text-5xl text-white">Juan Flores</h1>
+        <p className="font-semibold text-xl text-white">
+          Realizador Audiovisual
+        </p>
       </div>
     </>
   );

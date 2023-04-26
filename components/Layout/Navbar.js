@@ -72,13 +72,13 @@ const Navbar = () => {
       <header className="absolute z-10 w-full py-8 2xl:py-[2.375rem]">
         <div className="flex items-center justify-center">
           <Link passHref href="/">
-            <a>
+            {/* <a>
               <NostromoLogo
                 className="w-[10.625rem] 2xl:w-[14.063rem]"
                 logoColor={alternateHeader ? "#FFFFFF" : "#BD2327"}
                 textColor={router.pathname === "/" || alternateHeader ? "#FFFFFF" : "#131313"}
               />
-            </a>
+            </a> */}
           </Link>
         </div>
       </header>
@@ -109,18 +109,18 @@ const Navbar = () => {
                     <div className="flex flex-col">
                       {route.paths.map((route) => (
                         <Link key={route.name} passHref href={route.pathname}>
-                          <a className="mb-[0.938rem] pr-[2.625rem] text-[0.813rem] font-medium leading-[1.125rem] text-[#464646] 2xl:mb-[0.563rem] 2xl:text-[0.938rem]">
+                          {/* <a className="mb-[0.938rem] pr-[2.625rem] text-[0.813rem] font-medium leading-[1.125rem] text-[#464646] 2xl:mb-[0.563rem] 2xl:text-[0.938rem]">
                             {route.name}
-                          </a>
+                          </a> */}
                         </Link>
                       ))}
                     </div>
                   </details>
                 ) : (
                   <Link passHref href={route.pathname}>
-                    <a className="mb-[2.875rem] pr-[2.625rem] text-[1.063rem] font-bold leading-6 text-nostromo-dark-grey 2xl:text-xl">
+                    {/* <a className="mb-[2.875rem] pr-[2.625rem] text-[1.063rem] font-bold leading-6 text-nostromo-dark-grey 2xl:text-xl">
                       {route.name}
-                    </a>
+                    </a> */}
                   </Link>
                 );
               })}
