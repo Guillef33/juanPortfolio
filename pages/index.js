@@ -16,9 +16,27 @@ export default function Home() {
       </Head>
       <div className="bg-black h-screen flex items-center justify-center flex-col">
         <h1 className="font-semibold text-5xl text-white">Juan Flores</h1>
-        <p className="font-semibold text-xl text-white">
-          Realizador Audiovisual
-        </p>
+        <p className="font-semibold text-xl text-white">Filmaker</p>
+        <div className="py-12 hidden md:block">
+          <iframe
+            src="https://player.vimeo.com/video/534020193?h=9585832276"
+            width="800"
+            height="500"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div className="py-2 block md:hidden">
+          <iframe
+            src="https://player.vimeo.com/video/534020193?h=9585832276"
+            width="300"
+            height="500"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </>
   );
