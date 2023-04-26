@@ -1,11 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
-// import { Inter } from "next/font/google";
-// import styles from "@/styles/Home.module.css";
-
-// const inter = Inter({ subsets: ["latin"] });
+import useContentfull from "../hooks/useContentful";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [portfolio, setPortfolio] = useState([]);
+  const { getData } = useContentfull("portfolio");
+
+  useEffect(() => {
+    getData().then((response) => response && setPortfolio(response.items));
+  }, []);
+
+  console.log(portfolio);
+
   return (
     <>
       <Head>
@@ -14,30 +21,70 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-black h-screen flex items-center justify-center flex-col">
-        <h1 className="font-semibold text-5xl text-white">Juan Flores</h1>
-        <p className="font-semibold text-xl text-white">Filmaker</p>
-        <div className="py-12 hidden md:block">
-          <iframe
-            src="https://player.vimeo.com/video/534020193?h=9585832276"
-            width="800"
-            height="500"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+      <section className="bg-black ">
+        <div className="h-auto md:h-screen flex items-center justify-center flex-col">
+          <h1 className="font-semibold text-5xl text-white pt-24 ">
+            Juan Flores
+          </h1>
+          <p className="font-semibold text-xl text-white">Filmaker</p>
+          <div className="py-12 hidden md:block">
+            <iframe
+              src="https://player.vimeo.com/video/534020193?h=9585832276"
+              width="1200"
+              height="600"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div className="py-2 block md:hidden">
+            <iframe
+              src="https://player.vimeo.com/video/534020193?h=9585832276"
+              width="300"
+              height="500"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
-        <div className="py-2 block md:hidden">
-          <iframe
-            src="https://player.vimeo.com/video/534020193?h=9585832276"
-            width="300"
-            height="500"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <div
+          className={`grid h-auto grid-cols-1 place-items-center py-8 md:h-screen md:grid-cols-3 px-12`}
+        >
+          {portfolio.map((item, index) => (
+            <div
+              style={{
+                backgroundImage: `url(${item.fields.imagenDestacada.fields.file.url})`,
+              }}
+              className="flex h-[36rem] w-full flex-col items-center justify-center bg-cover bg-center py-12 grayscale-0 duration-500 hover:grayscale-0 md:grayscale"
+              key={index}
+            >
+              <h2 className="font-Montserrat text-lg font-bold text-white md:text-2xl">
+                {item.fields.title}
+              </h2>
+              <p className="font-semibold text-xl text-white">
+                {item.fields.descripcion}
+              </p>
+              <p className="font-semibold text-xl text-white">
+                {item.fields.rol}
+              </p>
+              <p className="font-semibold text-xl text-white">
+                {item.fields.ano}
+              </p>
+
+              {/* <Link
+                className="flex cursor-pointer items-center justify-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:ring-4 focus:ring-blue-300"
+                href={`/profiles/${item.fields.slug}`}
+              >
+                <a className="mb-0 flex items-center text-sm leading-6 text-nostromo-dark-grey md:mb-[2.875rem] 2xl:text-xl">
+                  <span className="mr-2 text-white ">Learn More</span>
+                  <img src="/img/arrowWhiteBTN.svg" />
+                </a>
+              </Link> */}
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
     </>
   );
 }

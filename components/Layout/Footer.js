@@ -9,7 +9,7 @@ import TwitterIcon from "../icons/TwitterIcon";
 
 const Footer = () => {
   return (
-    <footer className="px-[3.75rem] py-14 md:py-36 md:px-8">
+    <footer className="px-[3.75rem] py-14 md:py-36 md:px-8 bg-black">
       <div className="mx-auto flex h-full max-w-[82.875rem] flex-col md:flex-row">
         <div className="mb-14 flex-1 md:mr-4 md:mb-0">
           <div className="mb-9 md:mb-[70px]">
